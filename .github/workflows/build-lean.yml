@@ -71,7 +71,8 @@ jobs:
         rm -rf package/lean/luci-app-kodexplorer
         rm -rf package/lean/luci-app-pppoe-relay
         rm -rf package/lean/luci-app-pptp-server
-        rm -rf package/lean/luci-app-v2ray-server
+        rm -rf package/lean/luci-app-v2ray-server        
+        git -C ./feeds/ clone https://github.com/srchack/custom-packages.git
         git -C ./feeds/packages/net/ clone https://github.com/pymumu/openwrt-smartdns.git smartdns
         git -C ./feeds/luci/applications/ clone https://github.com/pymumu/luci-app-smartdns.git -b lede
         sed -e "s/+luci-compat //g" -i feeds/luci/applications/luci-app-smartdns/Makefile
