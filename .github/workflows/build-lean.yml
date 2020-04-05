@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt
+name: Build Lean's OpenWrt with Passwall - x86-64 UEFI
 
 on:
   release:
