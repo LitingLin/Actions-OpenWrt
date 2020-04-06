@@ -8,18 +8,24 @@ Build OpenWrt using GitHub Actions
 
 - Features
   - focus on network
-  - lean's OpenWrt (https://github.com/coolsnowwolf/lede)
-  - Lienol's luci-apps, including Passwall (https://github.com/Lienol/openwrt-package)
-  - smartdns (https://github.com/pymumu/smartdns)
+  - Lean's OpenWrt
+  - Lienol's luci-apps, including Passwall
+  - smartdns
   - builds mostly available vpn luci-apps
   - builds mostly available wired network chip kmod drivers, including kmod-usb
   - builds some network diagnosis tools, e.g. knot-dig, nmap, arp-scan, ss
-  - open-vm-tools (x86 only, thanks https://github.com/srchack/custom-packages)
+  - open-vm-tools (x86 only)
 - Builds
   - x86-64 UEFI
   - AArch64 Raspberry Pi 4B
+- Acknowledgments
+  - [OpenWrt](https://github.com/openwrt/openwrt)
+  - [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
+  - [Lienol's OpenWrt Packages](https://github.com/Lienol/openwrt-package)
+  - [smartdns](https://github.com/pymumu/smartdns)
+  - [open-vm-tools OpenWrt Makefile](https://github.com/srchack/custom-packages)
+  - [YYiiEt](https://github.com/YYiiEt/Actions-OpenWrt-RaspberryPi4)
    
-
 [Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
 ## Usage
@@ -30,7 +36,6 @@ Build OpenWrt using GitHub Actions
 - When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
 
 ## Acknowledgments
-- [YYiiEt](https://github.com/YYiiEt/Actions-OpenWrt-RaspberryPi4)
 - [Microsoft](https://www.microsoft.com)
 - [Microsoft Azure](https://azure.microsoft.com)
 - [GitHub](https://github.com)
@@ -39,8 +44,6 @@ Build OpenWrt using GitHub Actions
 - [mxschmitt/action-tmate](https://github.com/mxschmitt/action-tmate)
 - [csexton/debugger-action](https://github.com/csexton/debugger-action)
 - [Cisco](https://www.cisco.com/)
-- [OpenWrt](https://github.com/openwrt/openwrt)
-- [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
 
 ## License
 
