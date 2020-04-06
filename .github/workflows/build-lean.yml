@@ -66,6 +66,8 @@ jobs:
         git commit -m "apply patch 1"
         sed -i 's/ -Werror//g' src/Makefile.am
         sed -i 's/ -Werror//g' src/Makefile.in
+        sed -i 's/ -Werror//g' server/Makefile.am
+        sed -i 's/ -Werror//g' server/Makefile.in
         git add .
         git commit -m "apply patch 2"
         git diff HEAD~1 > ../openwrt/package/lean/shadowsocksr-libev/patches/9999-Remove-Werror.patch
