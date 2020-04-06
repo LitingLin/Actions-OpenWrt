@@ -57,6 +57,7 @@ jobs:
     - name: Update feeds
       run: |
         cd openwrt
+        sed -i '$a\src-git lienol https:\/\/github.com\/Lienol\/openwrt-package' feeds.conf.default
         ./scripts/feeds update -a
         rm -rf feeds/lienol/lienol/v2ray
         rm -rf feeds/lienol/lienol/openssl1.1
