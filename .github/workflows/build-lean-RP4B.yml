@@ -51,8 +51,14 @@ jobs:
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
+  
     - name: Clone source code
-      run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+      run: |
+        git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+        git clone https://github.com/orivee/shadowsocksr-libev
+        cd shadowsocksr-libev
+        git diff 1efa47e94a0144cb5ab0c4f230fe8e10d04c80e8 e2373d7199102f383b741da148b989c7c1e8832e > Remove-Werror.patch
+        mv Remove-Werror.patch ../openwrt/package/lean/shadowsocksr-libev/patches/0009-Remove-Werror.patch
 
     - name: Update feeds
       run: |
