@@ -55,10 +55,9 @@ jobs:
     - name: Clone source code
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-        git clone https://github.com/orivee/shadowsocksr-libev
-        cd shadowsocksr-libev
-        git diff 1efa47e94a0144cb5ab0c4f230fe8e10d04c80e8 e2373d7199102f383b741da148b989c7c1e8832e > Remove-Werror.patch
-        mv Remove-Werror.patch ../openwrt/package/lean/shadowsocksr-libev/patches/0009-Remove-Werror.patch
+        cd openwrt
+        sed -e "s/shadowsocksrr/orivee/g" -i ./package/lean/shadowsocksr-libev/Makefile
+        sed -e "s/d63ff863800a5645aca4309d5dd5962bd1e95543/1efa47e94a0144cb5ab0c4f230fe8e10d04c80e8/g" -i ./package/lean/shadowsocksr-libev/Makefile
 
     - name: Update feeds
       run: |
