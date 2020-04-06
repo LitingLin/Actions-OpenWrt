@@ -14,7 +14,7 @@ Build OpenWrt using GitHub Actions
   - builds mostly available vpn luci-apps
   - builds mostly available wired network chip kmod drivers, including kmod-usb
   - builds some network diagnosis tools, e.g. knot-dig, nmap, arp-scan, ss
-  - open-vm-tools (x86 only)
+  - open-vm-tools (x86 only, thanks https://github.com/srchack/custom-packages)
 - Builds
   - x86-64 UEFI
   - AArch64 Raspberry Pi 4B
@@ -30,7 +30,7 @@ Build OpenWrt using GitHub Actions
 - When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
 
 ## Acknowledgments
-
+- [YYiiEt](https://github.com/YYiiEt/Actions-OpenWrt-RaspberryPi4)
 - [Microsoft](https://www.microsoft.com)
 - [Microsoft Azure](https://azure.microsoft.com)
 - [GitHub](https://github.com)
