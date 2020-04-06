@@ -7,7 +7,7 @@
 Build OpenWrt using GitHub Actions
 
 - Features
-  - focus on network
+  - focuses on network
   - Lean's OpenWrt
   - Lienol's luci-apps, including Passwall
   - smartdns
