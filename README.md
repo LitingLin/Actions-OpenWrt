@@ -7,14 +7,22 @@
 Build OpenWrt using GitHub Actions
 
 - Features
-  - focuses on network
-  - Lean's OpenWrt
-  - Lienol's luci-apps, including Passwall
-  - smartdns
-  - builds mostly available vpn luci-apps
-  - builds mostly available wired network chip kmod drivers, including kmod-usb
-  - builds some network diagnosis tools, e.g. knot-dig, nmap, arp-scan, ss
-  - open-vm-tools (x86 only)
+  - V1
+    - focuses on network
+    - Lean's OpenWrt
+    - Lienol's luci-apps, including Passwall
+    - smartdns
+    - builds mostly available vpn luci-apps
+    - builds mostly available wired network chip kmod drivers, including kmod-usb
+    - builds some network diagnosis tools, e.g. knot-dig, nmap, arp-scan, ss
+    - open-vm-tools (x86 only)
+  - V2
+    - official OpenWrt master branch
+    - minimal build
+    - Lean's packages (openwrt-fullconenat luci-app-zerotier luci-app-xlnetacc luci-app-mwan3helper luci-app-syncdial)
+    - Lienol's packages (passwall)
+    - smartdns
+    - open-vm-tools (x86 only)
 - Builds
   - x86-64 UEFI
   - AArch64 Raspberry Pi 4B
