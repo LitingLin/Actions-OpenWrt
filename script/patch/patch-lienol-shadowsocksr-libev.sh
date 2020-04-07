@@ -17,5 +17,5 @@ git add .
 git commit -m "apply patch 2"
 git diff HEAD~1 > ../openwrt/feeds/lienol/package/shadowsocksr-libev/patches/9999-Remove-Werror.patch
 cd ..
-rm shadowsocksr/ -rf
+rm shadowsocksr -rf
 cd openwrt
