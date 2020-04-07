@@ -8,6 +8,7 @@ Build OpenWrt using GitHub Actions
 
 - Features
   - V1
+    - kernel 4.19 gcc 8.x glibc
     - focuses on network
     - Lean's OpenWrt
     - Lienol's luci-apps, including Passwall
@@ -17,10 +18,12 @@ Build OpenWrt using GitHub Actions
     - builds some network diagnosis tools, e.g. knot-dig, nmap, arp-scan, ss
     - open-vm-tools (x86 only)
   - V2
+    - kernel 5.4 gcc 9.x glibc
     - official OpenWrt master branch
     - minimal build
     - Lean's packages (openwrt-fullconenat luci-app-zerotier luci-app-xlnetacc luci-app-mwan3helper luci-app-syncdial)
     - Lienol's packages (passwall)
+    - intel 1000e kmod drivers and vmxnet3 (x86 only), usb: rtl8152, ax88179
     - smartdns
     - open-vm-tools (x86 only)
 - Builds
