@@ -55,14 +55,16 @@ jobs:
     - name: Clone source code
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-        ./patch-shadowsocksr-libev.sh
+        cd openwrt
+        ../script/patch/patch-lean-shadowsocksr-libev.sh
+        ../script/patch/patch-lean-coremark.sh
 
     - name: Update feeds
       run: |
         cd openwrt        
-        ../add-lienol-packages.sh
-        ../add-smartdns-packages.sh
-        ../patch-perl.sh
+        ../script/add-lienol-packages.sh
+        ../script/add-smartdns-packages.sh
+        ../script/patch/patch-perl.sh
         ./scripts/feeds update -a
 
     - name: Install feeds
