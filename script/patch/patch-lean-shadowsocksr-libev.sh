@@ -16,4 +16,6 @@ sed -i 's/ -Werror//g' server/Makefile.in
 git add .
 git commit -m "apply patch 2"
 git diff HEAD~1 > ../openwrt/package/lean/shadowsocksr-libev/patches/9999-Remove-Werror.patch
-cd ../openwrt
+cd ..
+rm shadowsocksr/ -rf
+cd openwrt

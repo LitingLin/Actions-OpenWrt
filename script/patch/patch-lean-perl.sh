@@ -16,7 +16,9 @@ then
     git add .
     git commit -m "second patch"
     git diff HEAD~1 > ../../openwrt/feeds/packages/lang/perl/patches/999-fix-glibc-build.patch
-    cd ../../openwrt
+    cd ../../
+    rm perl/ -rf
+    cd openwrt
 else
     echo "No need to patch perl"
 fi
