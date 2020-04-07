@@ -1,0 +1,1 @@
+git -C ./feeds/ clone --depth 1 https://github.com/srchack/custom-packages.git
