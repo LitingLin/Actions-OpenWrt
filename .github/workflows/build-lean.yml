@@ -63,9 +63,10 @@ jobs:
       run: |
         cd openwrt
         ../script/lean/add-lienol-packages.sh
-        ../script/add-smartdns-packages.sh
+        ../script/lean/add-smartdns-packages.sh
         ../script/add-open-vm-tools.sh
         ../script/patch/patch-lean-perl.sh
+        ../script/patch/patch-perl-glibc-x84-64.sh
         ./scripts/feeds update -a
 
     - name: Install feeds

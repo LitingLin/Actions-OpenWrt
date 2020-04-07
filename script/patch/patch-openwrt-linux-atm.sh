@@ -1,0 +1,1 @@
+wget -O package/network/utils/linux-atm/patches/709-glibc-include.patch https://raw.githubusercontent.com/openembedded/meta-openembedded/master/meta-networking/recipes-support/linux-atm/linux-atm/0001-saaldump-atmdump-Include-linux-sockios.h-for-SIOCGST.patch
