@@ -8,6 +8,7 @@ Build OpenWrt using GitHub Actions
 
 - Features
   - V1
+    - 默认中文
     - kernel 4.19 gcc 8.x glibc
     - focuses on network
     - Lean's OpenWrt
@@ -18,6 +19,7 @@ Build OpenWrt using GitHub Actions
     - builds some network diagnosis tools, e.g. knot-dig, nmap, arp-scan, ss
     - open-vm-tools (x86 only)
   - V2
+    - 默认中文
     - kernel 5.4 gcc 9.x glibc
     - official OpenWrt master branch
     - minimal build
