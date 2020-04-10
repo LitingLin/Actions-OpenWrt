@@ -1,0 +1,1 @@
+sed -i 's/net.netfilter.nf_conntrack_max=16384/net.netfilter.nf_conntrack_max=4194304\nnet.netfilter.nf_conntrack_buckets=1048576/g' ./package/kernel/linux/files/sysctl-nf-conntrack.conf

@@ -58,6 +58,7 @@ jobs:
     - name: Update feeds
       run: |
         cd openwrt
+        ../script/official/optimize-nf-conntrack-params.sh
         ../script/official/add-lean-packages.sh
         ../script/official/add-lienol-packages.sh
         ../script/official/add-fullconenat.sh
