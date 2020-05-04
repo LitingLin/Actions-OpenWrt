@@ -57,17 +57,20 @@ jobs:
 
     - name: Update feeds
       run: |
-        cd openwrt
-        ../script/official/optimize-nf-conntrack-params.sh
+        cd openwrt        
         ../script/official/add-lean-packages.sh
         ../script/official/add-lienol-packages.sh
+        ../script/official/add-passwall.sh
+        ../script/add-chinadns-ng.sh
+        ../script/add-luci-chinadns-ng.sh
+        ./scripts/feeds update -a
         ../script/official/add-fullconenat.sh
-        ../script/patch/patch-lienol-ipt2socks.sh
-        ../script/patch/patch-lienol-shadowsocksr-libev.sh
+        ../script/official/optimize-nf-conntrack-params.sh
+        ../script/patch/patch-lean-shadowsocksr-libev.sh
+        ../script/patch/patch-lean-ipt2socks.sh
         ../script/patch/patch-lean-fullconenat-kernel5.4.sh
         ../script/patch/patch-perl-glibc-x86-64.sh
         ../script/patch/patch-openwrt-lmdb.sh
-        ../script/patch/patch-openwrt-linux-atm.sh
         ../script/add-open-vm-tools.sh
         ../script/add-luci-app-smartdns.sh
         ./scripts/feeds update -a

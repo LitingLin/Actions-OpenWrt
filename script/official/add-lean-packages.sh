@@ -1,10 +1,8 @@
-packages=( openwrt-fullconenat luci-app-zerotier luci-app-xlnetacc luci-app-mwan3helper luci-app-syncdial luci-app-wrtbwmon luci-app-netdata luci-app-arpbind ddns-scripts_aliyun ddns-scripts_dnspod )
-
 git -C ../ clone --depth 1 https://github.com/coolsnowwolf/lede.git lean-lede
-mkdir package/lean
 
-for i in "${packages[@]}"
-do
-    cp -r ../lean-lede/package/lean/$i package/lean
-done
+cp -r ../lean-lede/package/lean package/
+rm -rf package/lean/auto*
+rm -rf package/lean/default-settings
+sed -i 's/$(STAGING_DIR_HOST)\/bin\/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)\/v2ray-plugin//g' package/lean/v2ray-plugin/Makefile
 rm ../lean-lede -rf
+sed -i '$a\src-git helloworld https:\/\/github.com\/fw876\/helloworld' feeds.conf.default
