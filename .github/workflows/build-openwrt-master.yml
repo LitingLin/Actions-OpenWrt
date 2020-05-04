@@ -62,7 +62,7 @@ jobs:
         ../script/official/add-lienol-packages.sh
         ../script/official/add-passwall.sh
         ../script/add-chinadns-ng.sh
-        ../script/add-luci-chinadns-ng.sh
+        ../script/add-luci-app-chinadns-ng.sh
         ./scripts/feeds update -a
         ../script/official/add-fullconenat.sh
         ../script/official/optimize-nf-conntrack-params.sh
