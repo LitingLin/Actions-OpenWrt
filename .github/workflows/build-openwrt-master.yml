@@ -57,7 +57,7 @@ jobs:
 
     - name: Update feeds
       run: |
-        cd openwrt        
+        cd openwrt
         ../script/official/add-lean-packages.sh
         ../script/official/add-lienol-packages.sh
         ../script/official/add-passwall.sh
