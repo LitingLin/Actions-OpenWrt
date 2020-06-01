@@ -8,5 +8,5 @@ git pull origin master
 git branch --set-upstream-to=origin/master master
 cd ../..
 pushd package/luci-app-openclash/luci-app-openclash/tools/po2lmo
-make && make install
+make && sudo make install
 popd
