@@ -22,6 +22,7 @@ Build OpenWrt using GitHub Actions
     - 默认中文
     - kernel 5.4 gcc 9.x glibc
     - official OpenWrt master branch
+    - openclash passwall shadowsocksr-plus
     - minimal build
     - Lean's packages (openwrt-fullconenat luci-app-zerotier luci-app-xlnetacc luci-app-mwan3helper luci-app-syncdial)
     - Lienol's packages (passwall)
