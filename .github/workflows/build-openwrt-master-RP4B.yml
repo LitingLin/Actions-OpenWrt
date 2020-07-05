@@ -64,7 +64,6 @@ jobs:
         ../script/add-chinadns-ng.sh
         ../script/add-luci-app-chinadns-ng.sh
         ../script/add-clash.sh
-        ../script/add-subconverter.sh
         ./scripts/feeds update -a
         ../script/official/add-fullconenat.sh
         ../script/official/optimize-nf-conntrack-params.sh
