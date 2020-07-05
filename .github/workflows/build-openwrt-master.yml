@@ -76,7 +76,6 @@ jobs:
         $GITHUB_WORKSPACE/script/patch/patch-perl-glibc-x86-64.sh
         $GITHUB_WORKSPACE/script/patch/patch-openwrt-lmdb.sh
         $GITHUB_WORKSPACE/script/add-open-vm-tools.sh
-        $GITHUB_WORKSPACE/script/add-luci-app-smartdns.sh
         ./scripts/feeds update -a
 
     - name: Install feeds
