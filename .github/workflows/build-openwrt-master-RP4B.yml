@@ -63,21 +63,21 @@ jobs:
     - name: Update feeds
       run: |
         cd openwrt
-        ../script/official/add-lean-packages.sh
-        ../script/official/add-lienol-packages.sh
-        ../script/official/add-passwall.sh
-        ../script/add-chinadns-ng.sh
-        ../script/add-luci-app-chinadns-ng.sh
-        ../script/add-clash.sh
+        $GITHUB_WORKSPACE/script/official/add-lean-packages.sh
+        $GITHUB_WORKSPACE/script/official/add-lienol-packages.sh
+        $GITHUB_WORKSPACE/script/official/add-passwall.sh
+        $GITHUB_WORKSPACE/script/add-chinadns-ng.sh
+        $GITHUB_WORKSPACE/script/add-luci-app-chinadns-ng.sh
+        $GITHUB_WORKSPACE/script/add-clash.sh
         ./scripts/feeds update -a
-        ../script/official/add-fullconenat.sh
-        ../script/official/optimize-nf-conntrack-params.sh
-        ../script/patch/patch-lean-shadowsocksr-libev.sh
-        ../script/patch/patch-lean-ipt2socks.sh
-        ../script/patch/patch-lean-fullconenat-kernel5.4.sh
-        ../script/patch/patch-perl-glibc-x86-64.sh
-        ../script/patch/patch-openwrt-lmdb.sh
-        ../script/add-luci-app-smartdns.sh
+        $GITHUB_WORKSPACE/script/official/add-fullconenat.sh
+        $GITHUB_WORKSPACE/script/official/optimize-nf-conntrack-params.sh
+        $GITHUB_WORKSPACE/script/patch/patch-lean-shadowsocksr-libev.sh
+        $GITHUB_WORKSPACE/script/patch/patch-lean-ipt2socks.sh
+        $GITHUB_WORKSPACE/script/patch/patch-lean-fullconenat-kernel5.4.sh
+        $GITHUB_WORKSPACE/script/patch/patch-perl-glibc-x86-64.sh
+        $GITHUB_WORKSPACE/script/patch/patch-openwrt-lmdb.sh
+        $GITHUB_WORKSPACE/script/add-luci-app-smartdns.sh
         ./scripts/feeds update -a
 
     - name: Install feeds
