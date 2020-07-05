@@ -1,4 +1,4 @@
-git -C ../ clone --depth 1 https://github.com/dong50252409/openwrt-package passwall-packages
+git -C ../ clone --depth 1 https://github.com/TinyTitanPro/lienol-openwrt-package.git passwall-packages
 mkdir -p package/lienol
 cp -r ../passwall-packages/lienol/luci-app-passwall	package/lienol
 rm ../passwall-packages -rf
