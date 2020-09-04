@@ -74,7 +74,7 @@ jobs:
         $GITHUB_WORKSPACE/script/patch/patch-lean-ipt2socks.sh
         $GITHUB_WORKSPACE/script/patch/patch-lean-fullconenat-kernel5.4.sh
         $GITHUB_WORKSPACE/script/patch/patch-openwrt-lmdb.sh
-        $GITHUB_WORKSPACE/script/add-open-vm-tools.sh
+        #$GITHUB_WORKSPACE/script/add-open-vm-tools.sh
         ./scripts/feeds update -a
 
     - name: Install feeds
