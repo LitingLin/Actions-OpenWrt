@@ -16,14 +16,12 @@ sed -i 's/ -Werror//g' server/Makefile.am
 sed -i 's/ -Werror//g' server/Makefile.in
 git add .
 git commit -m "apply patch 2"
-git diff HEAD~1 > $cwd/package/lean/shadowsocksr-libev/patches/9998-Remove-Werror.patch
-sed -i "31c extern const protocol_t *const tls_protocol;" src/tls.h
-sed -i "31c extern const protocol_t *const tls_protocol;" server/tls.h
-sed -i "32c extern const protocol_t *const http_protocol;" src/http.h
-sed -i "32c extern const protocol_t *const http_protocol;" server/http.h
-git add .
-git commit -m "apply patch 3"
-git diff HEAD~1 > $cwd/package/lean/shadowsocksr-libev/patches/9999-gcc10-error.patch
-cd ..
-rm shadowsocksr -rf
-cd $cwd
+#git diff HEAD~1 > $cwd/package/lean/shadowsocksr-libev/patches/9998-Remove-Werror.patch
+#sed -i 's/const protocol_t *const tls_protocol;/extern const protocol_t *const tls_protocol;/g' src/tls.h
+#sed -i 's/const protocol_t *const http_protocol;/extern const protocol_t *const http_protocol;/g' src/http.h
+#git add .
+#git commit -m "apply patch 3"
+#git diff HEAD~1 > $cwd/package/lean/shadowsocksr-libev/patches/9999-gcc10-error.patch
+#cd ..
+#rm shadowsocksr -rf
+#cd $cwd
