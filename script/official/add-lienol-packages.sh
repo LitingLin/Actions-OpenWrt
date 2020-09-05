@@ -1,6 +1,6 @@
 packages=( brook tcping trojan-go trojan-plus naiveproxy )
 
-git -C ../ clone --depth 1 https://github.com/Lienol/openwrt-package.git lienol-packages
+git -C ../ clone --depth 1 https://github.com/xiaorouji/openwrt-package lienol-packages
 mkdir -p package/lienol
 
 for i in "${packages[@]}"
