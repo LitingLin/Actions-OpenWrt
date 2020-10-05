@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build Official OpenWrt with Lienol's and Lean's packages - master branch - x86-64 UEFI
+name: Build Official OpenWrt with Lienol's and Lean's packages - 19.07 branch - x86-64 BIOS
 
 on:
   release:
@@ -15,7 +15,7 @@ on:
     branches:
       - master
     paths:
-      - 'openwrt-master-x86-64-uefi.config'
+      - 'openwrt-1907-x86-64-uefi.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -23,8 +23,8 @@ on:
 
 env:
   REPO_URL: https://git.openwrt.org/openwrt/openwrt.git
-  REPO_BRANCH: master
-  CONFIG_FILE: openwrt-master-x86-64-uefi.config
+  REPO_BRANCH: openwrt-19.07
+  CONFIG_FILE: openwrt-1907-x86-64-bios.config
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
@@ -66,8 +66,12 @@ jobs:
         $GITHUB_WORKSPACE/script/add-chinadns-ng.sh
         $GITHUB_WORKSPACE/script/add-luci-app-chinadns-ng.sh
         $GITHUB_WORKSPACE/script/add-clash.sh
+        $GITHUB_WORKSPACE/script/add-open-vm-tools.sh
         $GITHUB_WORKSPACE/script/add-subconverter.sh
         ./scripts/feeds update -a
+        $GITHUB_WORKSPACE/script/add-smartdns.sh
+        $GITHUB_WORKSPACE/script/add-luci-app-smartdns.sh
+        $GITHUB_WORKSPACE/script/bump-go-lang-version.sh
         $GITHUB_WORKSPACE/script/official/add-fullconenat.sh
         $GITHUB_WORKSPACE/script/official/optimize-nf-conntrack-params.sh
         $GITHUB_WORKSPACE/script/patch/patch-lean-shadowsocksr-libev.sh

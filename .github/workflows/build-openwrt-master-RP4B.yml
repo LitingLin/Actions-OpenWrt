@@ -65,7 +65,6 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/script/official/add-lean-packages.sh
         $GITHUB_WORKSPACE/script/official/add-lienol-packages.sh
-        $GITHUB_WORKSPACE/script/official/add-passwall.sh
         $GITHUB_WORKSPACE/script/add-chinadns-ng.sh
         $GITHUB_WORKSPACE/script/add-luci-app-chinadns-ng.sh
         $GITHUB_WORKSPACE/script/add-clash.sh
@@ -75,7 +74,6 @@ jobs:
         $GITHUB_WORKSPACE/script/official/optimize-nf-conntrack-params.sh
         $GITHUB_WORKSPACE/script/patch/patch-lean-shadowsocksr-libev.sh
         $GITHUB_WORKSPACE/script/patch/patch-lean-ipt2socks.sh
-        $GITHUB_WORKSPACE/script/patch/patch-lean-fullconenat-kernel5.4.sh
         $GITHUB_WORKSPACE/script/patch/patch-openwrt-lmdb.sh
         ./scripts/feeds update -a
 
