@@ -15,7 +15,7 @@ on:
     branches:
       - master
     paths:
-      - 'openwrt-1907-x86-64-uefi.config'
+      - 'openwrt-1907-x86-64-bios.config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
