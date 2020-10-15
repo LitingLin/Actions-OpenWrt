@@ -72,6 +72,7 @@ jobs:
         $GITHUB_WORKSPACE/script/add-smartdns.sh
         $GITHUB_WORKSPACE/script/add-luci-app-smartdns.sh
         $GITHUB_WORKSPACE/script/bump-go-lang-version.sh
+        $GITHUB_WORKSPACE/script/bump-libcap-to-master-branch.sh
         $GITHUB_WORKSPACE/script/official/add-fullconenat.sh
         $GITHUB_WORKSPACE/script/official/optimize-nf-conntrack-params.sh
         $GITHUB_WORKSPACE/script/patch/patch-lean-shadowsocksr-libev.sh
