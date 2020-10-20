@@ -65,16 +65,16 @@ jobs:
         $GITHUB_WORKSPACE/script/official/add-lienol-packages.sh
         $GITHUB_WORKSPACE/script/add-chinadns-ng.sh
         $GITHUB_WORKSPACE/script/add-luci-app-chinadns-ng.sh
-        $GITHUB_WORKSPACE/script/add-clash.sh
+        $GITHUB_WORKSPACE/script/add-luci-app-openclash.sh
         $GITHUB_WORKSPACE/script/add-open-vm-tools.sh
-        $GITHUB_WORKSPACE/script/add-subconverter.sh
+        $GITHUB_WORKSPACE/script/add-subconverter-bin.sh
         ./scripts/feeds update -a
         $GITHUB_WORKSPACE/script/add-smartdns.sh
         $GITHUB_WORKSPACE/script/add-luci-app-smartdns.sh
         $GITHUB_WORKSPACE/script/bump-go-lang-version.sh
-        $GITHUB_WORKSPACE/script/bump-libcap-to-master-branch.sh
         $GITHUB_WORKSPACE/script/official/add-fullconenat.sh
         $GITHUB_WORKSPACE/script/official/optimize-nf-conntrack-params.sh
+        $GITHUB_WORKSPACE/script/patch/patch-perl-glibc-x86-64.sh
         $GITHUB_WORKSPACE/script/patch/patch-lean-shadowsocksr-libev.sh
         $GITHUB_WORKSPACE/script/patch/patch-lean-ipt2socks.sh
         $GITHUB_WORKSPACE/script/patch/patch-openwrt-lmdb.sh
