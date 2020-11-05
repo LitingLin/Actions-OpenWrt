@@ -66,6 +66,8 @@ jobs:
         $GITHUB_WORKSPACE/script/add-chinadns-ng.sh
         $GITHUB_WORKSPACE/script/add-luci-app-chinadns-ng.sh
         $GITHUB_WORKSPACE/script/add-luci-app-openclash.sh
+        $GITHUB_WORKSPACE/script/add-luci-app-dnscrypt-proxy2.sh
+        $GITHUB_WORKSPACE/script/add-minisign.sh
         $GITHUB_WORKSPACE/script/add-open-vm-tools.sh
         $GITHUB_WORKSPACE/script/add-subconverter-bin.sh
         ./scripts/feeds update -a
