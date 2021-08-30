@@ -1,2 +1,8 @@
-mkdir -p package/chinadns-ng
-git -C package/chinadns-ng clone --depth 1 https://github.com/pexcn/openwrt-chinadns-ng.git chinadns-ng
+packages=( chinadns-ng )
+
+mkdir -p package/lienol
+
+for i in "${packages[@]}"
+do
+    svn co https://github.com/xiaorouji/openwrt-passwall/trunk/$i package/lienol/$i
+done
